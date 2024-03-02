@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --nav-background-color: #f3faff;
+  --card-background-color: #fff;
+  --background-color: white;
+  --hover-background-color: #f9fdff;
+  --input-color: black;
+  --input-background: white;
+}
+
+.dark {
+  --primary-text-color: #98c3e1;
+  --secondary-text-color: #8ba6ba;
+  --accent-color: #0d67a8;
+  --accent-color: #42a7f0;
+  --accent-color-dark: #124368;
+  --nav-background-color: #080809;
+  --card-background-color: black;
+  --background-color: black;
+  --hover-background-color: #001d2c;
+  --input-color: white;
+  --input-background: #131516;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-text-color);
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.outer-btn {
+  position: fixed;
+  top: 18px;
+  right: 30%;
+  width: 60px;
+  height: 30px;
+  color: grey;
+  border: 2px solid grey;
+  border-radius: 50px;
+  background-color: rgb(235, 219, 219);
+}
+
+.btn {
+  position: fixed;
+  top: 22px;
+  right: 32.5%;
+  height: 23px;
+  width: 23px;
+  border-radius: 13px;
+  border: 2px solid grey;
+  background-color: grey;
+}
+
+.dark .outer-btn {
+  background-color: rgb(37, 34, 34);
+}
+
+.dark .btn {
+  background-color: black;
+  right: 30.3%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1180px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.dark > nav {
+  box-shadow: 0 0 4px black;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  box-shadow: 0 0 4px #bbd0e2;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+
+.main-nav {
+  justify-content: space-between;
+  padding-block: 8px;
+}
+
+.company-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.company-name {
+  margin-left: 8px;
+  color: #080809;
+}
+
+.nav-links ul {
+  gap: 16px;
+}
+
+.hover-link {
+  cursor: pointer;
+}
+
+.hover-link:hover {
+  color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+  color: red;
+}
+
+.nav-item.active {
+  color: var(--accent-color);
+}
+
+.search-bar {
+  height: 40px;
+  gap: 8px;
+}
+
+input,
+select,
+textarea {
+  color: var(--input-color);
+}
+
+.dark .news-input {
+  border: 2px solid rgb(17, 42, 99);
+}
+
+.news-input {
+  width: 200px;
+  height: 80%;
+  padding-inline: 12px;
+  border-radius: 4px;
+  border: 2px solid #bbd0e2;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--input-background);
+}
+
+.search-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+main {
+  padding-block: 20px;
+  margin-top: 80px;
+}
+
+.cards-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: start;
+}
+
+.card {
+  width: 360px;
+  min-height: 400px;
+  /* box-shadow: 0 0 4px #d4ecff; */
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--card-background-color);
+}
+
+.card:hover {
+  box-shadow: 1px 1px 8px #d4ecff;
+  background-color: var(--hover-background-color);
+  transform: translateY(-2px);
+}
+
+.card-header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.news-source {
+  margin-block: 12px;
+}
